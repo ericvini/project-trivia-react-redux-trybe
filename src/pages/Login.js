@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { login, fetchToken, resetAssertions } from '../actions/index';
 import { setStorage } from '../services';
+import "../css/login.css"
 
 class Login extends React.Component {
   constructor() {
@@ -66,7 +67,7 @@ class Login extends React.Component {
     const { history } = this.props;
 
     return (
-      <div>
+      <div className="image-login">
         <input
           data-testid="input-gravatar-email"
           onChange={ (event) => this.handleEmailChange(event) }

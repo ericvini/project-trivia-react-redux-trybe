@@ -1,0 +1,9 @@
+.image-login{
+  background-image: url("trivia.png");
+  border: 2px solid black;
+  padding: 25px;  
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 700px;
+  width: 700px;
+}

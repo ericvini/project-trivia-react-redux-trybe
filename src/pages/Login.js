@@ -67,16 +67,21 @@ class Login extends React.Component {
     const { history } = this.props;
 
     return (
-      <div className="image-login">
+      <div className="input-login">
         <input
+          className="input-user"
+          placeholder="Email"
           data-testid="input-gravatar-email"
           onChange={ (event) => this.handleEmailChange(event) }
         />
         <input
+          className="input-user"
+          placeholder="Nome"
           data-testid="input-player-name"
           onChange={ (event) => this.handleNameChange(event) }
         />
         <button
+          className="input-user"
           data-testid="btn-play"
           disabled={ !authentication || name.length < numberCharacters }
           type="button"
@@ -89,6 +94,7 @@ class Login extends React.Component {
           Jogar
         </button>
         <button
+          className="input-user"
           data-testid="btn-settings"
           type="button"
           onClick={ () => history.push('/settings') }

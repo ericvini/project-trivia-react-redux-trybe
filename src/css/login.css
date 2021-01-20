@@ -1,9 +1,23 @@
-.image-login{
-  background-image: url("trivia.png");
-  border: 2px solid black;
-  padding: 25px;  
+
+.input-login{
+  background-image: url("trivia.png");  
+  padding: 10px;  
   background-repeat: no-repeat;
-  background-size: auto;
-  height: 700px;
-  width: 700px;
+  background-size: contain;
+  background-position: center;
+  height: 150px; 
+  text-align:center;
+  margin-top: 20px;
+}
+
+.input-user{
+  display: inline-block;
+  align-items:center;  
+  margin-left: 10px;
+  margin-right: auto;
+  margin-top: 200px;
+  border-radius:4px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  box-shadow: 1px 1px 2px  
 }

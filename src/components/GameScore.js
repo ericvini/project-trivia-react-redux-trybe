@@ -6,8 +6,8 @@ class GameScore extends React.Component {
   render() {
     const { score } = this.props;
     return (
-      <div>
-        { score }
+      <div className='score'>
+        {`score ${score}` }
       </div>);
   }
 }

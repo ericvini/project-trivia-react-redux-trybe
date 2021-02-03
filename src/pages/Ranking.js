@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getStorage } from '../services';
+import '../css/ranking.css'
 
 class Ranking extends Component {
   render() {
@@ -18,8 +19,8 @@ class Ranking extends Component {
       return 0;
     });
     return (
-      <div>
-        <h1 data-testid="ranking-title">
+      <div className='ranking'>
+        <h1 className ='title' data-testid="ranking-title">
           Ranking
         </h1>
         { ranking.map((element) => (
@@ -33,15 +34,16 @@ class Ranking extends Component {
             <ul
               data-testid={ `player-name-${ranking.indexOf(element)}` }
             >
-              { element.name }
+              {`nome ${element.name}`  }
             </ul>
             <ul
               data-testid={ `player-score-${ranking.indexOf(element)}` }
             >
-              { element.score }
+              {`score ${element.score}`  }
             </ul>
           </ol>
         ))}
+        <div className='button-tela-inicial'>
         <button
           type="button"
           data-testid="btn-go-home"
@@ -49,6 +51,8 @@ class Ranking extends Component {
         >
           Voltar para tela inicial
         </button>
+        </div>
+       
       </div>
     );
   }

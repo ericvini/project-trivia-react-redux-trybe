@@ -11,16 +11,16 @@ class Feedbacks extends Component {
 
     if (assertions >= minAssertions) {
       return (
-        <div>
+        <div className='good'>
           <FeedbackHeader />
           <h1 data-testid="feedback-text">
             Mandou bem!
           </h1>
           <h4 data-testid="feedback-total-score">
-            { assertions }
+            {`score total ${assertions}`  }
           </h4>
           <h4 data-testid="feedback-total-question">
-            { assertions }
+            { `total das perguntas ${assertions} `}
           </h4>
           <button
             type="button"
@@ -42,16 +42,16 @@ class Feedbacks extends Component {
       );
     }
     return (
-      <div>
+      <div className='bad'>
         <FeedbackHeader />
         <h1 data-testid="feedback-text">
           Podia ser melhor...
         </h1>
         <h4 data-testid="feedback-total-score">
-          { score }
+          {`score total ${score}` }
         </h4>
         <h4 data-testid="feedback-total-question">
-          { assertions }
+          {`total de acertos ${assertions}`  }
         </h4>
         <button
           type="button"

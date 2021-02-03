@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import md5 from 'crypto-js/md5';
 import { hashRequest } from '../actions/index';
 import GameScore from './GameScore';
+import '../css/game.css'
 
 class GameHeader extends React.Component {
   constructor() {
@@ -26,16 +27,24 @@ class GameHeader extends React.Component {
     const { name, assertions, hash } = this.props;
     const src = `https://www.gravatar.com/avatar/${hash}`;
     return (
-      <header>
+      <div className='header'>
+        <header>
         <img
           data-testid="header-profile-picture"
           src={ src }
           alt=""
         />
-        <span data-testid="header-player-name">{ name }</span>
-        <span data-testid="header-score">{ assertions }</span>
-        <GameScore />
+        <div className='score-name'>
+        <span data-testid="header-player-name">{`nome ${ name}` }</span> 
+        </div>      
+        <div>
+        <span data-testid="header-score">{ `acertos ${assertions}`}</span> 
+        </div>
+        <GameScore />       
+             
       </header>
+      </div>
+      
     );
   }
 }

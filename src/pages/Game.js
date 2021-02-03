@@ -188,7 +188,7 @@ class Game extends React.Component {
     const randomAnswersLocal = sorted ? randomAnswers : this.shuffle(taggedAnswers);
     randomAnswersAction({ randomAnswers: randomAnswersLocal, sorted: true });
     return (
-      <div>
+      <div className='answers'>
         <GameHeader />
         <div key={ question.question }>
           <h4 key={ question.category } data-testid="question-category">
